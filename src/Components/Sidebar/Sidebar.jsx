@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import { faChalkboardUser, faHome } from "@fortawesome/free-solid-svg-icons";
-import { faComment, faUser } from "@fortawesome/free-regular-svg-icons";
-import { faRankingStar } from "@fortawesome/free-solid-svg-icons/faRankingStar";
+import home from "../../assets/house-chimney-solid.svg";
+import aboutme from "../../assets/user-solid.svg";
+import blog from "../../assets/feather-pointed-solid.svg";
+import formation from "../../assets/chalkboard-user-solid.svg";
+import portfolio from "../../assets/ranking-star-solid.svg";
+import contact from "../../assets/comments-regular.svg";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeIcon, SetActiveIcon] = useState(null);
+  const [activeIcon, setActiveIcon] = useState(null);
   const sidebarControls = useAnimation();
 
   const handleToggle = () => {
@@ -16,7 +19,7 @@ const Sidebar = () => {
   };
 
   const handleItemClick = (icon) => {
-    SetActiveIcon(icon);
+    setActiveIcon(icon);
     setIsOpen(true);
   };
 
@@ -31,8 +34,8 @@ const Sidebar = () => {
           <motion.div
             className="sidebar__container"
             variants={{
-              open: { with: 55, opacity: 0 },
-              closed: { with: 0, opacity: 0 },
+              open: { width: 55, opacity: 1 },
+              closed: { width: 0, opacity: 0 },
             }}
             initial="closed"
             animate={sidebarControls}
@@ -41,15 +44,11 @@ const Sidebar = () => {
             <div className={`sidebar__text`}>
               <ul className="sidebar__list">
                 {[
-                  { icon: faHome, path: "/", key: "home" },
-                  { icon: faUser, path: "/aboutme", key: "aboutme" },
-                  {
-                    icon: faChalkboardUser,
-                    path: "/formation",
-                    key: "formation",
-                  },
-                  { icon: faRankingStar, path: "/portfolio", key: "portfolio" },
-                  { icon: faComment, path: "/contact", key: "contact" },
+                  { icon: home, path: "/", key: "home" },
+                  { icon: aboutme, path: "/aboutme", key: "aboutme" },
+                  { icon: formation, path: "/formation", key: "formation" },
+                  { icon: portfolio, path: "/portfolio", key: "portfolio" },
+                  { icon: contact, path: "/contact", key: "contact" },
                 ].map((item) => (
                   <motion.li
                     key={item.key}
