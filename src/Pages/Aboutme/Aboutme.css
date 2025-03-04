@@ -1,0 +1,93 @@
+.aboutme__section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  /* Reducido a la mitad */
+  margin-right: 10px;
+  /* Reducido a la mitad */
+  padding-top: 10px;
+  /* Reducido a la mitad */
+}
+
+.aboutme__title {
+  padding-left: 10px;
+  /* Reducido a la mitad */
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  flex-wrap: wrap;
+}
+
+.description__info {
+  width: 60%;
+  padding-right: 20px;
+  /* Reducido a la mitad */
+}
+
+.description__text {
+  padding-top: 10px;
+  /* Reducido a la mitad */
+  text-align: justify;
+}
+
+.aboutme__contact {
+  width: calc(40% - 5px);
+  /* Reducido a la mitad */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Para pantallas de hasta 1024px de ancho */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .description__info {
+    width: 50%;
+    /* Ajustado para un mejor equilibrio */
+    padding-right: 10px;
+    /* Reducido, pero no a la mitad */
+  }
+
+  .aboutme__contact {
+    width: 50%;
+    /* Ajustado para ocupar la mitad */
+    margin-top: 10px;
+    /* Reducido a la mitad */
+  }
+}
+
+/* Para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+  .aboutme__section {
+    margin-left: 10px;
+    /* Sin cambio necesario */
+    margin-right: 10px;
+    /* Sin cambio necesario */
+  }
+
+  .description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description__text {
+    margin-bottom: 7.5px;
+    /* Reducido a la mitad */
+  }
+
+  .description__info {
+    width: 100%;
+    padding-right: 0;
+    /* Sin cambio necesario */
+  }
+
+  .aboutme__contact {
+    width: 100%;
+    margin-top: 10px;
+    /* Reducido a la mitad */
+  }
+}

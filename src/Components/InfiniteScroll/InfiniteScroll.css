@@ -1,0 +1,67 @@
+.infinite-scroll {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido */
+}
+
+.scroll-top {
+  margin-bottom: 30px;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.scroll-right {
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.marquee__item-box {
+  margin: 10px;
+  max-width: fit-content;
+}
+
+.marquee__item {
+  padding: 2rem;
+  background-color: var(--first-color);
+  color: var(--black);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--first-alpha-color);
+}
+
+.marquee__item-img {
+  width: 5rem;
+}
+
+@media (max-width: 768px) {
+  .infinite-scroll {
+    width: 80vw; /* Aumentar ancho en pantallas más pequeñas */
+  }
+
+  .marquee__item {
+    padding: 1rem; /* Reducir padding para pantallas pequeñas */
+  }
+
+  .marquee__item-img {
+    width: 4rem; /* Reducir tamaño de imagen */
+  }
+}
+
+@media (max-width: 468px) {
+
+
+  .infinite-scroll {
+    width: 85vw; /* Ajustar a casi todo el ancho en móviles */
+  }
+
+  .scroll-top,
+  .scroll-right {
+    margin-bottom: 15px; /* Reducir márgenes en móviles */
+  }
+
+  .marquee__item {
+    padding: 0.5rem; /* Menor padding para dispositivos móviles */
+  }
+
+  .marquee__item-img {
+    width: 3rem; /* Ajustar aún más el tamaño de la imagen */
+  }
+}
