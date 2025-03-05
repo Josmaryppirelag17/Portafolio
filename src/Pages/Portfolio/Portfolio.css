@@ -1,0 +1,50 @@
+.portfolio__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  /* Eliminado padding */
+}
+
+.portfolio__info {
+  text-align: center;
+  padding-bottom: 0;
+  /* Eliminado padding */
+}
+
+.portfolio__section-title,
+.portfolio__section-subtitle {
+  padding: 0;
+  /* Eliminado padding */
+  font-size: 2rem;
+}
+
+.portfolio__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  /* Eliminado gap */
+}
+
+@media (max-width: 768px) {
+  .section-subtitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolio__section-title,
+  .portfolio__section-subtitle {
+    font-size: 1.5rem;
+    /* Reducimos el tamaño de fuente */
+  }
+
+  .portfolio__grid {
+    flex-direction: column;
+    /* Cambiamos a columna */
+    align-items: center;
+    /* Centramos elementos */
+    gap: 0;
+    /* Eliminado gap */
+  }
+}
