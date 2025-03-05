@@ -48,3 +48,10 @@
     /* Eliminado gap */
   }
 }
+
+@media (max-width: 720px) {
+  .portfolio__section {
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+  }
+}
