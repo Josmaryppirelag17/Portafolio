@@ -13,45 +13,67 @@ import { motion } from "framer-motion";
 import Title from "../../Components/TitleSec/TitleSec";
 
 const ContactComponent = () => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const message = e.target.message.value;
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const message = e.target.message.value;
 
-    // Expresión regular para validar el formato del correo electrónico
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Expresión regular para validar el formato del correo electrónico
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailRegex.test(email)) {
-      // Mostrar mensaje de error si el correo electrónico no es válido
-      swal(
-        "Error",
-        "Por favor, introduce un correo electrónico válido",
-        "error"
-      );
-      return;
-    }
+  if (!emailRegex.test(email)) {
+    // Mostrar mensaje de error si el correo electrónico no es válido
+    swal.fire({
+      title: "Error",
+      text: "Por favor, introduce un correo electrónico válido",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+    return;
+  }
 
-    if (message.trim().length < 30) {
-      // Mostrar mensaje de error si el mensaje es demasiado corto
-      swal("Error", "El mensaje debe tener al menos 50 caracteres", "error");
-      return;
-    }
+  if (message.trim().length < 30) {
+    // Mostrar mensaje de error si el mensaje es demasiado corto
+    swal.fire({
+      title: "Error",
+      text: "El mensaje debe tener al menos 30 caracteres",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+    return;
+  }
 
-    try {
-      await emailjs.sendForm(
-        "service_kqewfng",
-        "template_8bdz4tm",
-        e.target,
-        "0dqReoIznBc66IJ3C"
-      );
-      swal("Mensaje enviado");
-    } catch (error) {
-      console.error("Error:", error);
-      swal("Error al enviar el mensaje");
-    }
-  };
+  try {
+    await emailjs.sendForm(
+      "service_xk2a0m8",
+      "template_y7rdzra",
+      e.target,
+      "CU_CoBWNbdnJVy-4E"
+    );
+
+    // Mensaje de éxito personalizado
+    swal.fire({
+      title: "¡Mensaje enviado!",
+      text: "Gracias por contactarme. Te responderé lo antes posible.",
+      icon: "success",
+      confirmButtonText: "OK",
+      customClass: {
+        popup: "custom-swal-popup", // Clase personalizada para el popup
+        confirmButton: "custom-swal-button", // Clase personalizada para el botón
+      },
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    swal.fire({
+      title: "Error",
+      text: "Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+  }
+};
 
   return (
     <motion.section
@@ -157,7 +179,7 @@ const ContactComponent = () => {
                   href="mailto:josmarypireladev@gmail.com"
                   title="Espero tu mensaje"
                 >
-                  josmarypirela.dev@gmail.com
+                  josmarypirela.developer@gmail.com
                 </a>
               </span>
             </motion.li>

@@ -7,7 +7,7 @@ import "./Home.css";
 const HomeComponent = () => {
   const handleCopyEmail = () => {
     navigator.clipboard
-      .writeText("josmarypirela.dev@gmail.com")
+      .writeText("josmarypirela.developer@gmail.com")
       .then(() => {
         // Usa Swal.fire para mostrar el mensaje
         Swal.fire({
@@ -34,6 +34,28 @@ const HomeComponent = () => {
           },
         });
       });
+  };
+
+  const handleDownloadCV = () => {
+    // Simula la descarga del archivo
+    const link = document.createElement("a");
+    link.href = "./JosmaryPirelaCV.pdf"; // Ruta al archivo CV
+    link.download = "JosmaryPirelaCV.pdf"; // Nombre del archivo descargado
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Muestra un mensaje de éxito
+    Swal.fire({
+      title: "¡Descarga exitosa!",
+      text: "El currículum se ha descargado correctamente.",
+      icon: "success",
+      timer: 1500, // Cierra automáticamente después de 1.5 segundos
+      showConfirmButton: false, // No muestra el botón de confirmación
+      customClass: {
+        popup: "download__alert", // Aplica la clase personalizada
+      },
+    });
   };
 
   return (
@@ -80,7 +102,11 @@ const HomeComponent = () => {
               transition={{ duration: 1, delay: 0.8 }}
               className="resume__cv"
             >
-              <a href="./JosmaryPirelaCV.pdf" download>
+              <a
+                href="./JosmaryPirelaCV.pdf"
+                download
+                onClick={handleDownloadCV}
+              >
                 <Button text="Descargar CV" padding="10px 20px"></Button>
               </a>
             </motion.div>
@@ -90,7 +116,7 @@ const HomeComponent = () => {
               transition={{ duration: 1, delay: 1 }}
               className="copy__email"
             >
-              <p>josmarypirela.dev@gmail.com</p>
+              <p>josmarypirela.developer@gmail.com</p>
 
               <div onClick={handleCopyEmail}>
                 <Button text="Copiar" padding="9px 0px" />
