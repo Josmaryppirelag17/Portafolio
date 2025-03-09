@@ -22,7 +22,7 @@
 .marquee__item {
   padding: 2rem;
   background-color: var(--first-color);
-  color: var(--black);
+  color: var(--fourth-color);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--first-alpha-color);
 }

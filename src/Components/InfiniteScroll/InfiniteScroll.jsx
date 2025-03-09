@@ -9,7 +9,7 @@ import figma from "../../assets/figma.svg";
 import notion from "../../assets/notion.svg";
 import trello from "../../assets/trello.svg";
 import git from "../../assets/git.svg";
-import github from "../../assets/github-black.svg";
+import github from "../../assets/github.svg";
 import { motion } from "framer-motion";
 
 const InfiniteScroll = () => {
