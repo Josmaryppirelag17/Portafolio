@@ -56,7 +56,7 @@ const FormationComponent = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.2 }}
             >
-              2024 - Ahora
+              2023 - 2024
             </motion.h6>
           </motion.figure>
 
