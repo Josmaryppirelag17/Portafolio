@@ -1,5 +1,6 @@
 import demoBS from "../assets/demoBS.png";
 import demoRQ from "../assets/demoRQ.png";
+import ecommerce from "../assets/ecommerce.png";
 
 export const Work = [
   {
