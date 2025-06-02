@@ -2,11 +2,8 @@
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  /* Reducido a la mitad */
   margin-right: 10px;
-  /* Reducido a la mitad */
   padding-top: 10px;
-  /* Reducido a la mitad */
 }
 
 .aboutme__title {
@@ -25,12 +22,10 @@
 .description__info {
   width: 60%;
   padding-right: 20px;
-  /* Reducido a la mitad */
 }
 
 .description__text {
   padding-top: 10px;
-  /* Reducido a la mitad */
   text-align: justify;
 }
 
@@ -47,16 +42,12 @@
 
   .description__info {
     width: 50%;
-    /* Ajustado para un mejor equilibrio */
     padding-right: 10px;
-    /* Reducido, pero no a la mitad */
   }
 
   .aboutme__contact {
     width: 50%;
-    /* Ajustado para ocupar la mitad */
     margin-top: 10px;
-    /* Reducido a la mitad */
   }
 }
 
@@ -64,9 +55,7 @@
 @media (max-width: 768px) {
   .aboutme__section {
     margin-left: 10px;
-    /* Sin cambio necesario */
     margin-right: 10px;
-    /* Sin cambio necesario */
   }
 
   .description {
@@ -76,18 +65,15 @@
 
   .description__text {
     margin-bottom: 7.5px;
-    /* Reducido a la mitad */
   }
 
   .description__info {
     width: 100%;
     padding-right: 0;
-    /* Sin cambio necesario */
   }
 
   .aboutme__contact {
     width: 100%;
     margin-top: 10px;
-    /* Reducido a la mitad */
   }
 }

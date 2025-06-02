@@ -36,22 +36,19 @@
   .portfolio__section-title,
   .portfolio__section-subtitle {
     font-size: 1.5rem;
-    /* Reducimos el tamaño de fuente */
   }
 
   .portfolio__grid {
     flex-direction: column;
-    /* Cambiamos a columna */
     align-items: center;
-    /* Centramos elementos */
-    gap: 0;
-    /* Eliminado gap */
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 720px) {
   .portfolio__section {
     margin-bottom: 5rem;
-    margin-top: 10rem;
+    margin-top: 55rem;
+    margin-bottom: 10rem;
   }
 }
