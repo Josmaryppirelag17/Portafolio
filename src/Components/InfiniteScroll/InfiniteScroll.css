@@ -2,66 +2,92 @@
   width: 35vw;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar contenido */
+  align-items: center;
+  /* Centrar contenido */
+  margin: 0 auto;
 }
 
-.scroll-top {
-  margin-bottom: 30px;
-  width: 100%; /* Asegura que ocupe todo el ancho */
-}
-
+.scroll-top,
 .scroll-right {
-  width: 100%; /* Asegura que ocupe todo el ancho */
+  width: 100%;
+  margin-bottom: 1.875rem;
 }
 
 .marquee__item-box {
-  margin: 10px;
+  margin: 0.625rem;
   max-width: fit-content;
 }
 
 .marquee__item {
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: var(--first-color);
   color: var(--fourth-color);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--first-alpha-color);
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .marquee__item-img {
   width: 5rem;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .infinite-scroll {
+    width: 50vw;
+  }
+
+  .marquee__item {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.938rem;
+  }
+
+  .marquee__item-img {
+    width: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
   .infinite-scroll {
-    width: 80vw; /* Aumentar ancho en pantallas más pequeñas */
-  }
-
-  .marquee__item {
-    padding: 1rem; /* Reducir padding para pantallas pequeñas */
-  }
-
-  .marquee__item-img {
-    width: 4rem; /* Reducir tamaño de imagen */
-  }
-}
-
-@media (max-width: 468px) {
-
-
-  .infinite-scroll {
-    width: 85vw; /* Ajustar a casi todo el ancho en móviles */
+    width: 80vw;
   }
 
   .scroll-top,
   .scroll-right {
-    margin-bottom: 15px; /* Reducir márgenes en móviles */
+    margin-bottom: 1.25rem;
   }
 
   .marquee__item {
-    padding: 0.5rem; /* Menor padding para dispositivos móviles */
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
   }
 
   .marquee__item-img {
-    width: 3rem; /* Ajustar aún más el tamaño de la imagen */
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infinite-scroll {
+    width: 90vw;
+  }
+
+  .scroll-top,
+  .scroll-right {
+    margin-bottom: 1rem;
+  }
+
+  .marquee__item {
+    padding: 0.5rem 1rem;
+    font-size: 0.813rem;
+  }
+
+  .marquee__item-img {
+    width: 3rem;
+  }
+
+  .marquee__item-box {
+    margin: 0.5rem;
   }
 }

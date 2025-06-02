@@ -2,25 +2,45 @@
 
 :root {
   --first-color: #bebebe;
-    --first-alpha-color: #bebebe80;
-    --second-color: #979797;
-    --second-alpha-color: #97979780;
-    --third-color: #727272;
-    --third-alpha-color: #72727280;
-    --fourth-color: #000;
-    --fourth-alpha-color: #ffffff80;
-    --fifth-color: #26272b;
-    --link: #48dad2;
-    --text: #fff;
+  --first-alpha-color: #bebebe80;
+  --second-color: #979797;
+  --second-alpha-color: #97979780;
+  --third-color: #727272;
+  --third-alpha-color: #72727280;
+  --fourth-color: #000;
+  --fourth-alpha-color: #ffffff80;
+  --fifth-color: #26272b;
+  --link: #48dad2;
+  --text: #fff;
 
   /* Tipografía */
   --principal-font: "Roboto", sans-serif;
   --secundary-font: "Montserrat", sans-serif;
+
+  /* Breakpoints */
+  --mobile-s: 320px;
+  --mobile-m: 375px;
+  --mobile-l: 425px;
+  --tablet: 768px;
+  --laptop: 1024px;
 }
 
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 * {
@@ -33,9 +53,11 @@ html {
 
 /* Configuramos la tipografía para toda la web */
 body {
-  background-color: var(--tirth-color);
+  background-color: var(--fourth-color);
   font-family: var(--principal-font);
   color: var(--first-color);
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 section {
@@ -199,5 +221,29 @@ figure {
   em {
     font-size: 0.9em;
     /* Reducido del 1em a 0.9em */
+  }
+}
+
+/* Mejoras responsive generales */
+@media (max-width: 768px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .pages {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
   }
 }
