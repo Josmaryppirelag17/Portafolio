@@ -1,5 +1,6 @@
 import demoBS from "../assets/demoBS.png";
 import demoRQ from "../assets/demoRQ.png";
+import ecommerce from "../assets/ecommerce.png";
 
 export const Work = [
   {
@@ -24,5 +25,16 @@ export const Work = [
 
     demo: "https://random-quote-sepia.vercel.app/",
     github: "https://github.com/Josmaryppirelag17/random-quote",
+  },
+    {
+    id: 3,
+    name: "Ecommerce",
+    description:
+      "Ecommerce simple realizado con Javascript, css y html.",
+    tags: ["#HTML ", "#CSS ", "#Javascript "],
+    image: ecommerce,
+
+    demo: "https://ecommerce-five-sepia-16.vercel.app/",
+    github: "https://github.com/Josmaryppirelag17/ecommerce",
   },
 ];
