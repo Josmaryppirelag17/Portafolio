@@ -1,6 +1,7 @@
 import demoBS from "../assets/demoBS.png";
 import demoRQ from "../assets/demoRQ.png";
 import ecommerce from "../assets/ecommerce.png";
+import todolist from "../assets/todolist.png";
 
 export const Work = [
   {
@@ -43,7 +44,7 @@ export const Work = [
     description:
       "To Do Lis simple realizada con React JS y CSS.",
     tags: ["#ReactJS ", "#CSS "],
-    image: ecommerce,
+    image: todolist,
 
     demo: "https://todolist-six-umber.vercel.app/",
     github: "https://github.com/Josmaryppirelag17/todolist",
