@@ -47,5 +47,5 @@ export const Work = [
 
     demo: "https://todolist-six-umber.vercel.app/",
     github: "https://github.com/Josmaryppirelag17/todolist",
-  },
+  }
 ];
